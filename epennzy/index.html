@@ -3,77 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Epennzy KYC job finder — temukan pekerjaan KYC dari berbagai kategori.">
-  <title>Epennzy KYC Job</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="manifest" href="manifest.json">
+  <title>Epennzy KYC Jobs</title>
+  <style>
+    /* CSS akan dimuat di style.css */
+  </style>
 </head>
-<body class="dark:bg-gray-900">
-  <!-- App Container -->
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <div class="header-left">
-        <h1 class="logo">Epennzy KYC</h1>
-        <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
-      </div>
-      <button id="loginBtn" class="btn-secondary">Login</button>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-      <section class="search-section">
-        <div class="search-container">
-          <input 
-            id="searchInput" 
-            type="text" 
-            placeholder="Cari job KYC..." 
-            aria-label="Search KYC jobs"
-            class="search-input"
-          >
-          <select id="categoryFilter" class="filter-select" aria-label="Filter category">
-            <option value="all">Semua Kategori</option>
-            <option value="crypto">Crypto</option>
-            <option value="bank">Bank</option>
-            <option value="freelance">Freelance</option>
-            <option value="e-wallet">E-wallet</option>
-          </select>
-        </div>
-        <div class="action-buttons">
-          <button id="detailBtn" class="btn-primary">Lihat Detail</button>
-          <button id="sortBtn" class="btn-primary">Urutkan Bayaran</button>
-        </div>
-      </section>
-
-      <!-- Job List -->
-      <section id="jobList" class="job-list"></section>
-      
-      <!-- Empty State -->
-      <div id="noResults" class="empty-state">
-        <img src="data:image/svg+xml;base64,..." alt="No jobs found" width="150">
-        <p>Tidak ada job yang ditemukan</p>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>© 2025 Epennzy KYC. All rights reserved.</p>
-    </footer>
-  </div>
-
-  <!-- Modals -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <div id="modalBody"></div>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <svg class="logo" viewBox="0 0 120 30" width="120" height="30">
+        <text x="0" y="20" font-family="inherit" font-weight="700" fill="currentColor">Epennzy</text>
+        <text x="70" y="20" font-family="inherit" fill="#FF7043">KYC</text>
+      </svg>
+      <button id="themeToggle" aria-label="Toggle theme">🌓</button>
     </div>
-  </div>
+    <button id="loginBtn">Login</button>
+  </header>
 
-  <!-- Back to Top -->
-  <a href="#" id="backToTop" class="back-to-top" aria-label="Back to top">↑</a>
+  <main>
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Cari pekerjaan..." class="search-input">
+      <select id="categoryFilter" class="filter-select">
+        <option value="all">Semua Kategori</option>
+        <option value="crypto">Crypto</option>
+        <option value="bank">Bank</option>
+      </select>
+      <button id="sortBtn" class="btn">Urutkan Bayaran</button>
+    </section>
+
+    <section id="jobList" class="job-list">
+      <!-- Job cards akan dimuat via JS -->
+      <div class="loader"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Epennzy KYC</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
