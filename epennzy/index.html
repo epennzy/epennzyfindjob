@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Epennzy KYC job finder — temukan pekerjaan KYC dari berbagai kategori.">
+  <title>Epennzy KYC Job</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body class="dark:bg-gray-900">
+  <!-- App Container -->
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1 class="logo">Epennzy KYC</h1>
+        <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
+      </div>
+      <button id="loginBtn" class="btn-secondary">Login</button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="search-section">
+        <div class="search-container">
+          <input 
+            id="searchInput" 
+            type="text" 
+            placeholder="Cari job KYC..." 
+            aria-label="Search KYC jobs"
+            class="search-input"
+          >
+          <select id="categoryFilter" class="filter-select" aria-label="Filter category">
+            <option value="all">Semua Kategori</option>
+            <option value="crypto">Crypto</option>
+            <option value="bank">Bank</option>
+            <option value="freelance">Freelance</option>
+            <option value="e-wallet">E-wallet</option>
+          </select>
+        </div>
+        <div class="action-buttons">
+          <button id="detailBtn" class="btn-primary">Lihat Detail</button>
+          <button id="sortBtn" class="btn-primary">Urutkan Bayaran</button>
+        </div>
+      </section>
+
+      <!-- Job List -->
+      <section id="jobList" class="job-list"></section>
+      
+      <!-- Empty State -->
+      <div id="noResults" class="empty-state">
+        <img src="data:image/svg+xml;base64,..." alt="No jobs found" width="150">
+        <p>Tidak ada job yang ditemukan</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Epennzy KYC. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <a href="#" id="backToTop" class="back-to-top" aria-label="Back to top">↑</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
