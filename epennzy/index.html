@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epennzy KYC Jobs</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <svg class="logo" viewBox="0 0 120 30" width="120" height="30">
+        <text x="0" y="20" font-family="inherit" font-weight="700" fill="currentColor">Epennzy</text>
+        <text x="70" y="20" font-family="inherit" fill="#FF7043">KYC</text>
+      </svg>
+      <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+    </div>
+    <button id="loginBtn">Login</button>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Cari pekerjaan..." class="search-input">
+      <select id="categoryFilter" class="filter-select">
+        <option value="all">Semua Kategori</option>
+        <option value="crypto">Crypto</option>
+        <option value="bank">Bank</option>
+      </select>
+      <button id="sortBtn" class="btn">Urutkan Bayaran</button>
+    </section>
+
+    <section id="jobList" class="job-list">
+      <!-- Jobs will load here -->
+      <div class="loader"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Epennzy KYC</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
